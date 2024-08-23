@@ -1,1 +1,11 @@
-<h3> This is angular lifecycle hooks </h3>
+<div class="container">
+    <input type="text" #inputEl (focus)="0">
+    <button (click)="Onsubmit(inputEl)">submit</button>
+    @if (!isDestroy) {
+        <app-demo [message]="inputVal">
+            <p #temp>User has eneterd following text: {{ inputVal }}</p>
+        </app-demo>
+    }
+    <!-- <p #temp>This is Angular lifecycle hooks.</p> -->
+    <button (click)="DestroyComponent()">Show / Hide</button>
+</div>
